@@ -68,6 +68,13 @@ The following image shows the application's IndexedDB storage:
 ![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
 
 
+## SPECIAL MENTION
+
+Package.json under the scripts section must include this for running concurrently. 
+// Collection of scripts to run
+  "scripts": {                     
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",   // Script to start the development server and client concurrently
+    "start": "npm run build && cd server && node server.js",   // Script to build the project and start the server
 
 ## Review
 
@@ -81,13 +88,6 @@ I am required to submit the following for review:
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
 
 
-## sPECIAL MENTION
-
-Package.json under the scripts section must include this for running concurrently. 
-
-  "scripts": {                     // Collection of scripts to run
-    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",   // Script to start the development server and client concurrently
-    "start": "npm run build && cd server && node server.js",   // Script to build the project and start the server
     "server": "cd server && nodemon server.js --ignore client",   // Script to start the server using nodemon
     "build": "cd client && npm run build",   // Script to build the client-side code
     "install": "cd client && npm install",   // Script to install dependencies for the client
